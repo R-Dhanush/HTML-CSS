@@ -74,7 +74,8 @@ body{
 }
 
 .profile-card_content{
-  text-align:justify;
+  ttext-align: center;
+  line-height: 1.5;
   font-size: 1rem;
   font-weight: 500;
   color: #242424;
@@ -103,6 +104,20 @@ body{
   transform: rotatey(360deg);
 }
 
+.profile-card_icon:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
 .Profile-Card_CTA{
   width: 70%;
   margin-top: 0.25rem;
@@ -118,8 +133,10 @@ body{
   color: #fff;
   background-color: #646464;
   cursor: pointer;
+  transition: all 0.5s;
 }
 
 .profile-card_btn:hover{
   background-color: #343434;
+  transform: scale(1.05);
 }
